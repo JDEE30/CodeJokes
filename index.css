@@ -1,0 +1,34 @@
+body {
+  background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%);
+}
+h1 {
+
+  font-size: 50px;
+}
+h1 , p {
+  text-align: center;
+  margin-top: 10%;
+  position: relative;
+  padding-left: 2%;
+  padding-right: 2%;
+  
+}
+p {
+
+  font-size: 40px;
+
+}
+#nextArrow{
+  position: absolute;
+  margin-left: 90%;
+  float: right;
+}
+#backArrow{
+  
+  clear: both;
+  padding-left: 2%;
+  padding-right: 2%;
+  position: relative;
+  margin-right: 3%;
+  margin-left: 3%;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <h1>Code Jokes</h1>
+        <p id="myText"></p>
+        <img src="next.svg" id="nextArrow" width="60" height="120">
+        <img src="back.svg" id="backArrow" width="60" height="120">
+
+
+
+
+      
+
+        <script>
+let texts = ["Why did the programmer quit his job?", "He didn't get arrays.", "Knock, knock.", "Who’s there?", ".................", "Java.", "Why did the programmer cross the road?", "To git to the other side!", "How do you keep a programmer in the shower all day?", "Give him a bottle of shampoo which says ''lather, rinse, repeat.''", "Why did the programming student fail his final?", "His dog took a mega byte out of his homework!", "Why did the programmer break up with his girlfriend?", "She was too loopy to function.", "You ever wonder why some startups do really well and others flop?", "The coders of the big tech startups had an inheritance!", "Why did the programmer invite too many people to the wedding?","They told him to bring a +1!", "How do you tell an introverted computer scientist from an extroverted computer scientist?", "An Extroverted computer scientist looks at your shoes when he talks to you.", "What do computers and air conditioners have in common?", "They both become useless when you open windows.", "Why do Java programmers have to wear glasses?", "Because they don't C#.", "How do you tell HTML from HTML5?", "Try it out in Internet Explorer.", "Did it work?", "No?", "It's HTML5.", ];
+ let text=document.getElementById("myText");
+let btn = document.getElementById("nextArrow");
+let btn2 = document.getElementById("backArrow");
+
+btn.addEventListener("click", changeText);
+ text.innerHTML = texts[0];
+
+
+    function changeText(){
+       let searchTerm =  text.innerHTML  ;
+       let index=texts.indexOf(searchTerm)+1;
+       if(index == texts.length )index=0;
+          let result=texts[index];
+          text.innerHTML = result;
+    	  return;
+       }
+
+       btn2.addEventListener("click", changeTextBack);
+       text.innerHTML = texts[0];
+
+       function changeTextBack(){
+    let searchTerm = text.innerHTML ;
+    let index=texts.indexOf(searchTerm)-1;
+    if(index == texts.length)index;
+    let result=texts[index];
+          text.innerHTML = result;
+   
+    	  return;
+       }
+        </script>
+        <script src="index.js" async></script>
+    </body>
+</html>
